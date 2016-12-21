@@ -1,0 +1,45 @@
+options:
+
+  version:
+    type: string
+    default: 6.0.0-2
+    description: HPCCSystems plugin version. Only support one vesion for all plugins
+
+  base-url:
+    type: string
+    default: http://cdn.hpccsystems.com/releases
+    #default: http://54.148.254.74/releases
+    #default: http://10.240.32.242/builds
+    description: | 
+      This is the base URL to download HPCC Platform package.
+      To use HPCC Platform community beta version set it to
+      http://cdn.hpccsystems.com/beta
+    
+  package-prefix:
+    type: string
+    default: hpccsystems-plugin-
+    description:  if ganglia, nagios it will be different prefix
+
+  name-version-seperator:
+    type: string
+    default: "_"
+    description:  for ganglia, nagios, wssql it should be "-"
+
+  plugins:
+    type: string
+    default: "sqlite3embed"
+    description: |
+      HPCC platform plugins seperated by comma. Avaible plugins: javaembed,
+      memcached, mysqlembed, pyembed, sqlite3embed and v8embed
+
+  sqlite3emed-hash:
+    type: string
+    default: ""
+    description: |
+      Each packge can have checksum. If not provided or empty check will be shipped
+
+   
+  hash-type:
+    type: string
+    default: md5
+    description: hask type for checksum such as md5, sha1, sha256, sha512, etc

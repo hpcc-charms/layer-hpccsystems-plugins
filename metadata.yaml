@@ -1,0 +1,17 @@
+name: hpccsystems-plugins
+summary: HPCC (High Performance Computing Cluster) Plugins
+maintainer: xiaoming.wang@lexisnexis.com
+description: |
+  HPCC Platform Plugins: javaembed, memcached, mysqlembed, pyembed, rembed, sqlite3embed and v8embed.
+  * Local Provider (LXC)
+  * Amazon Web Services
+
+tags:
+    - big_data
+
+subordinate: true
+
+requires:
+  hpcc-plugins:
+    interface: plugin
+    scope: container
